@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>pro</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="stylesheets/ss.css" rel="stylesheet">
+<script src="javascripts/ls.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+    <h1 class="l" style="margin-left:160px"><i>login</i></h1>
+    <form action="/login" method="post" class="lf" style="margin-top:50px">
+    <div class="form-group">    
+    <label class="control-group col-md-3">username:</label>
+    <div class="input-group col-md-7">
+    <input type="text" class="form-control"name="name" placeholder="enter username" style="text-align:center;margin-left:30px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
+    <label class="control-group col-md-3">password:</label>
+    <div class="input-group col-md-7">
+    <input type="password" name="password" class="form-control" placeholder="enter password" style="text-align:center;margin-left:30px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <input type="submit" style="margin-left:180px" class="sub"> 
+    </form>
+    </div>
+
+    <div class="col-md-6">
+    <h1 class="s"  style="margin-left:160px"><i> signup </i></h1>
+    <form action="/signup" method="post" class="sf" style="margin-top:50px">
+    <div class="form-group">    
+    <label class="control-group col-md-3">Name:</label>
+    <div class="input-group col-md-7">
+    <input type="text" name="name" class="form-control" placeholder="enter your name" style="text-align:center;margin-left:25px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Email:</label>
+    <div class="input-group col-md-7">
+    <input type="email" name="email" class="form-control" placeholder="enter your email" style="text-align:center;margin-left:25px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <label style="margin-left:15px">Gender:</label>
+    <input type="radio" name="gender" style="margin-left:65px" >male &nbsp;&nbsp;
+    <input type="radio" name="gender">female<br><br>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Address:</label>
+    <div class="input-group col-md-7">
+    <textarea name="address" class="form-control" placeholder="enter your address" style="text-align:center;margin-left:25px;border-radius:10px"></textarea><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Phoneno:</label>
+    <div class="input-group col-md-7">
+    <input type="tel" name="mobileno" class="form-control" placeholder="enter your number" style="text-align:center;margin-left:25px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <input type="submit" style="margin-left:170px" class="sub">
+    </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
