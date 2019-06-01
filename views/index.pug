@@ -11,13 +11,15 @@
 <body>
 <div class="container">
 <div class="row">
+    
     <div class="col-md-6">
     <h1 class="l" style="margin-left:160px"><i>login</i></h1>
+    <p>#{err}</p>
     <form action="/login" method="post" class="lf" style="margin-top:50px">
     <div class="form-group">    
     <label class="control-group col-md-3">username:</label>
     <div class="input-group col-md-7">
-    <input type="text" class="form-control"name="name" placeholder="enter username" style="text-align:center;margin-left:30px;border-radius:10px"><br><br>
+    <input type="text" class="form-control" name="name" placeholder="enter username" style="text-align:center;margin-left:30px;border-radius:10px"><br><br>
     </div>
     </div>
     <div class="form-group">    
@@ -40,14 +42,20 @@
     </div>
     </div>
     <div class="form-group">    
+    <label class="control-group col-md-3">password:</label>
+    <div class="input-group col-md-7">
+    <input type="password" name="password" class="form-control" placeholder="enter password" style="text-align:center;margin-left:30px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
     <label class="control-group col-md-3">Email:</label>
     <div class="input-group col-md-7">
     <input type="email" name="email" class="form-control" placeholder="enter your email" style="text-align:center;margin-left:25px;border-radius:10px"><br><br>
     </div>
     </div>
     <label style="margin-left:15px">Gender:</label>
-    <input type="radio" name="gender" style="margin-left:65px" >male &nbsp;&nbsp;
-    <input type="radio" name="gender">female<br><br>
+    <input type="radio" name="gender" value="m" style="margin-left:65px;font-size:20px" >male &nbsp;&nbsp;
+    <input type="radio" name="gender" value="f">female<br><br>
     <div class="form-group">    
     <label class="control-group col-md-3">Address:</label>
     <div class="input-group col-md-7">

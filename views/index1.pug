@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>pro</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="stylesheets/ss.css" rel="stylesheet">
+<script src="javascripts/ls.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <h1 class="s"  style="margin-left:150px"><i> Registration form </i></h1>
+    <form action="/regform" method="post" class="sf" style="margin-top:50px">
+    <div class="form-group">    
+    <label class="control-group col-md-3">Name:</label>
+    <div class="input-group col-md-7">
+    <input type="text" name="name" class="form-control" placeholder="enter your name" style="text-align:center;margin-left:20px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Email:</label>
+    <div class="input-group col-md-7">
+    <input type="email" name="email" class="form-control" placeholder="enter your email" style="text-align:center;margin-left:20px;border-radius:10px"><br><br>
+    </div>
+    </div>
+     <div class="form-group">    
+    <label class="control-group col-md-3">rollno:</label>
+    <div class="input-group col-md-7">
+    <input type="tel" name="rollno" class="form-control" placeholder="enter your rollnumber" style="text-align:center;margin-left:20px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <label style="margin-left:15px">Gender:</label>
+    <input type="radio" name="gender" value="m" style="margin-left:60px;font-size:20px" >male &nbsp;&nbsp;
+    <input type="radio" name="gender" value="f">female<br><br>
+    <label style="margin-left:15px">College:</label>
+    <select name="college" style="margin-left:60px">
+        <option></option>
+        <option value="ACE">ACE</option>
+        <option value="AEC">AEC</option>
+        <option value="ACEt">ACET</option>
+        <option value="others">others</option>
+    </select><br><br>
+    <label style="margin-left:15px">Branch:</label>
+    <select name="branch" style="margin-left:60px">
+        <option></option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="CSE">CSE</option>
+        <option value="others">others</option>
+    </select><br><br>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Address:</label>
+    <div class="input-group col-md-7">
+    <textarea name="address" class="form-control" placeholder="enter your address" style="text-align:center;margin-left:20px;border-radius:10px"></textarea><br><br>
+    </div>
+    </div>
+    <div class="form-group">    
+    <label class="control-group col-md-3">Phoneno:</label>
+    <div class="input-group col-md-7">
+    <input type="tel" name="mobileno" class="form-control" placeholder="enter your number" style="text-align:center;margin-left:20px;border-radius:10px"><br><br>
+    </div>
+    </div>
+    <input type="submit" style="margin-left:250px" class="sub">
+    </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
