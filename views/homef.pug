@@ -32,7 +32,13 @@ html
               .col-md-6.col-md-offset-3
                 h1(style='margin-left:150px')
                   i Contact Information
-                form(action='/regform', method='post', style='margin-top:50px')
+                form(action='/regform', method='post',enctype="multipart/form-data", style='margin-top:50px')
+                  .form-group
+                    label.control-group.col-md-3 Uploadimage:
+                    .input-group.col-md-7
+                      input.form-control(type='file', name='image', style='text-align:center;margin-left:20px;border-radius:10px')
+                      br
+                      br  
                   .form-group
                     label.control-group.col-md-3 Name:
                     .input-group.col-md-7
@@ -116,5 +122,68 @@ html
                   td
                     //- button(style="margin-right:5px").btn.btn-info Edit 
                     //- botton.btn.btn-danger.remove Remove
-                    button.btn.btn-info Edit 
-                    button(value=member.rollno).btn.btn-danger.delete remove
+                    button(value=member.rollno).btn.btn-info.edit Edit 
+                    button(value=member.rollno).btn.btn-warning.delete remove
+          .dontshow
+            .container
+            .row
+              .col-md-6.col-md-offset-3
+                h1(style='margin-left:150px')
+                  i Contact Information
+                form(action='/update', method='post', style='margin-top:50px')
+                  .form-group
+                    label.control-group.col-md-3 Name:
+                    .input-group.col-md-7
+                      input#name.form-control(type='text', name='name', placeholder='enter your name', style='text-align:center;margin-left:20px;border-radius:10px')
+                      br
+                      br
+                  .form-group
+                    label.control-group.col-md-3 Email:
+                    .input-group.col-md-7
+                      input.form-control(type='email', name='email', placeholder='enter your email', style='text-align:center;margin-left:20px;border-radius:10px')#email
+                      br
+                      br
+                  .form-group
+                    label.control-group.col-md-3 rollno:
+                    .input-group.col-md-7
+                      input.form-control(type='tel', name='rollno', placeholder='enter your     rollnumber', style='text-align:center;margin-left:20px;border-radius:10px')#rollno
+                      br
+                      br
+                  label(style='margin-left:15px') Gender:
+                  input(type='radio', name='gender', value='m', style='margin-left:60px;font-size:20px')
+                  |     male   
+                  input#m(type='radio', name='gender', value='f')
+                  | female
+                  br
+                  br
+                  label(style='margin-left:15px') College:
+                  select(name='college', style='margin-left:60px')#college
+                    option
+                    option(value='ACE') ACE
+                    option(value='AEC') AEC
+                    option(value='ACEt') ACET
+                    option(value='others') others
+                  br
+                  br
+                  label(style='margin-left:15px') Branch:
+                  select(name='branch', style='margin-left:60px')#branch
+                    option
+                    option(value='ECE') ECE
+                    option(value='EEE') EEE
+                    option(value='CSE') CSE
+                    option(value='others') others
+                  br
+                  br
+                  .form-group
+                    label.control-group.col-md-3 Address:
+                    .input-group.col-md-7
+                      textarea.form-control(name='address', placeholder='enter your address', style='text-align:center;margin-left:20px;border-radius:10px')#address
+                      br
+                      br
+                  .form-group
+                    label.control-group.col-md-3 Phoneno:
+                    .input-group.col-md-7
+                      input.form-control(type='tel', name='mobileno', placeholder='enter your number', style='text-align:center;margin-left:20px;border-radius:10px')#phoneno
+                      br
+                      br
+                  input.sub(type='submit',value="update" style='margin-left:250px')
