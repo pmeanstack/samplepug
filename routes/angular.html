@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet"  href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.js"></script> 
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> 
+    <script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script> 
+    <script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script><script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script> 
+    <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script> 
+    <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script> 
+    <script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script> 
+    <script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script> 
+   
+</head>
+<body ng-app="student" ng-controller="studentController" class="container" > <br />
+    <h1>Student Information:</h1>
+    <form class="form-horizontal" ng-submit="create()" role="form">
+        <div class="form-group">
+            <label for="firstName" class="col-sm-3 control-label">First Name</label>
+            <div class="col-sm-6">
+                <input type="text" id="firstName" class="form-control" ng-model="student.firstName" />
+            </div>
+            <div class="col-sm-3"></div>
+
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-sm-3 control-label">Last Name</label>
+            <div class="col-sm-6">
+                <input type="text" id="lastName" class="form-control" ng-model="student.lastName" />
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        
+      
+
+        <input type="submit" value="Save" class="btn btn-primary col-sm-offset-3" /> 
+        <input type="submit" value="update" ng-click="updateForm()" class="btn btn-warning" /> 
+        <input type="submit" value="cancel" ng-click="cancel()" class="btn btn-danger" /> <br/>
+      
+    </form><br><br>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+    <table id="example"  class="table table-bordered table-striped table-hover">
+         <thead>
+            <tr>
+                <th>First name</th>
+                <th>Lastname</th>
+                <th>action</th>
+               
+            </tr>
+         </thead>
+         <tbody>
+            <tr >
+                <td>meghana</td>
+                <td>sri</td>
+                <td>
+                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-danger">Remove</button>
+                </td>
+            </tr>
+           
+            <tr>
+                <td>prasanthi</td>
+                <td>pakki</td>
+                <td>
+                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-danger">Remove</button>
+                </td>
+                
+            </tr> 
+             
+        </tbody>
+    </table>
+    </div>
+    </div>
+    </div> 
+    <script>
+     //1. create app module 
+        var studentApp = angular.module('studentApp', []);
+
+        //2. create controller
+        studentApp.controller("studentController", function ($scope, $http) {
+  
+            //3. attach originalStudent model object
+            $scope.originalStudent = {
+                firstName: 'James',
+                lastName: 'Bond',
+             
+            };
+
+            //4. copy originalStudent to student. student will be bind to a form 
+            $scope.student = angular.copy($scope.originalStudent);
+
+            //5. create submitStudentForm() function. This will be called when user submits the form
+            $scope.submitStudnetForm = function () {
+
+                // send $http request to save student
+
+            };
+
+            //6. create resetForm() function. This will be called on Reset button click.  
+            $scope.resetForm = function () {
+                $scope.student = angular.copy($scope.OriginalStudent);
+            };
+    });
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+    } );
+    
+    </script>   
+</body>
+</html>
